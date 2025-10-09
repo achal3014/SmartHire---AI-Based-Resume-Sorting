@@ -36,29 +36,27 @@ function App() {
     }
   };
 
-  return (
-    <div style={{ minHeight: '100vh', width: '100%', margin: 0, padding: 0 }} className="bg-gradient-to-br from-slate-50 to-slate-100">
-      <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto', padding: '3rem 2rem' }}>
+ return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-6 mb-10 h-44 flex flex-col justify-center">
+        <div className="bg-white rounded-xl shadow-md border border-slate-200 p-8 mb-8 text-center">
           <div className="flex items-center justify-center mb-3">
-            <Briefcase className="w-25 h-25 text-indigo-600 mr-3" />
-            <h1 className="text-4xl font-bold text-slate-900">
+            <Briefcase className="w-10 h-10 text-indigo-600 mr-3" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">
               Smart-Hire: Resume Ranking System
             </h1>
           </div>
-          <p className="text-center text-slate-600">
+          <p className="text-center text-slate-600 max-w-2xl mx-auto">
             Upload candidate resumes and match them against your job requirements
           </p>
         </div>
 
-
         {/* Main Content */}
-        <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-10">
+        <div className="bg-white rounded-xl shadow-md border border-slate-200 p-8 sm:p-10 max-w-5xl mx-auto">
           <div className="space-y-8">
             <FileUploader onFilesChange={setFiles} files={files} />
-            
-            <div className="border-t border-slate-200 pt-8 mt-2">
+            <div className="border-t border-slate-200">
               <JobDescriptionInput
                 jobDescription={jobDescription}
                 jdSkills={jdSkills}
@@ -70,7 +68,7 @@ function App() {
             <button
               onClick={handleSubmit}
               disabled={loading || !files.length || !jobDescription.trim()}
-              className="w-full py-4 px-6 bg-indigo-600 text-white font-semibold text-lg rounded-lg hover:bg-indigo-700 disabled:bg-slate-300 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="w-full py-4 px-6 bg-indigo-600 text-white font-semibold text-lg rounded-lg hover:bg-indigo-700 disabled:bg-slate-300 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-200 shadow-sm"
             >
               {loading ? (
                 <span className="flex items-center justify-center">

@@ -11,18 +11,17 @@ const FileUploader = ({ onFilesChange, files }) => {
   };
 
   return (
-    <div className="space-y-10 pt-6 pb-8"> {/* Increased overall vertical padding */}
-      <label className="block text-lg font-semibold text-slate-700 mb-3">
+    <div className="space-y-10 pt-2 pb-8 px-4 max-w-4xl mx-auto w-full">
+      <label className="block text-xl font-semibold text-slate-800 mb-4 text-left">
         Upload Resumes
       </label>
 
       <div
-        className={`border-2 border-dashed rounded-xl px-16 py-24 text-center cursor-pointer transition-all duration-200 ${
+        className={`border-2 border-dashed rounded-xl px-8 py-20 text-center cursor-pointer transition-all duration-200 ${
           dragging
             ? "border-indigo-500 bg-indigo-50"
             : "border-slate-300 bg-slate-50 hover:border-slate-400"
         }`}
-        style={{ minHeight: "280px" }} // slightly taller
         onDragOver={(e) => {
           e.preventDefault();
           setDragging(true);
@@ -35,7 +34,7 @@ const FileUploader = ({ onFilesChange, files }) => {
         }}
         onClick={() => document.getElementById("file-input").click()}
       >
-        <Upload className="w-12 h-12 mx-auto mb-8 text-slate-400" />
+        <Upload className=" mx-auto mb-8 text-slate-400" />
         <p className="text-slate-700 font-semibold mb-3 text-lg">
           Drag and drop resume files here
         </p>

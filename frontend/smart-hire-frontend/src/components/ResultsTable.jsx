@@ -15,7 +15,7 @@ const ResultsTable = ({ results }) => {
     <div className="mt-8">
       <div className="flex items-center mb-4">
         <TrendingUp className="w-5 h-5 mr-2 text-indigo-600" />
-        <h2 className="text-lg font-semibold text-slate-800">Ranking Results</h2>
+        <h2 className="text-lg font-semibold text-slate-700">Ranking Results</h2>
       </div>
       <div className="border border-slate-200 rounded-lg overflow-hidden">
         <table className="w-full">

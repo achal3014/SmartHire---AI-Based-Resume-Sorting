@@ -6,9 +6,9 @@ const JobDescriptionInput = ({
   setJobDescription,
   setJdSkills,
 }) => (
-  <div className="py-16 px-8 space-y-10"> {/* Matches FileUploader layout */}
+  <div className="py-6 px-4 space-y-10 max-w-4xl mx-auto"> {/* Matches FileUploader layout */}
     <div>
-      <label className="block text-base font-semibold text-slate-700 mb-3">
+      <label className="block text-xl font-semibold text-slate-800 mb-4 text-left">
         Job Description
       </label>
 
@@ -23,7 +23,7 @@ const JobDescriptionInput = ({
     </div>
 
     <div>
-      <label className="block text-base font-semibold text-slate-700 mb-3">
+      <label className="block text-xl font-semibold text-slate-800 mb-4 text-left">
         Required Skills
       </label>
 
