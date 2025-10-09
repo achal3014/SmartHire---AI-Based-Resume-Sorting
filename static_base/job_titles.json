@@ -1,0 +1,91 @@
+{
+  "software engineer": [
+    "software engineer",
+    "software developer",
+    "programmer",
+    "developer",
+    "sde",
+    "sde i",
+    "sde ii",
+    "backend engineer",
+    "frontend engineer",
+    "full stack developer",
+    "application developer",
+    "java developer",
+    "python developer",
+    "c++ developer"
+  ],
+  "data scientist": [
+    "data scientist",
+    "data analyst",
+    "ml engineer",
+    "machine learning engineer",
+    "ai engineer",
+    "research scientist",
+    "data engineer",
+    "statistician",
+    "analytics engineer"
+  ],
+  "product manager": [
+    "product manager",
+    "pm",
+    "product owner",
+    "po",
+    "associate product manager",
+    "senior product manager",
+    "lead product manager"
+  ],
+  "devops engineer": [
+    "devops engineer",
+    "site reliability engineer",
+    "sre",
+    "infrastructure engineer",
+    "cloud engineer",
+    "release engineer",
+    "build and release engineer"
+  ],
+  "designer": [
+    "ui designer",
+    "ux designer",
+    "graphic designer",
+    "product designer",
+    "visual designer",
+    "interaction designer",
+    "experience designer"
+  ],
+  "qa engineer": [
+    "qa engineer",
+    "quality assurance engineer",
+    "test engineer",
+    "software tester",
+    "automation tester",
+    "manual tester"
+  ],
+  "business analyst": [
+    "business analyst",
+    "ba",
+    "data analyst",
+    "functional analyst",
+    "systems analyst"
+  ],
+  "project manager": [
+    "project manager",
+    "pm",
+    "program manager",
+    "project coordinator",
+    "delivery manager"
+  ],
+  "technical lead": [
+    "tech lead",
+    "technical lead",
+    "team lead",
+    "lead engineer",
+    "engineering lead"
+  ],
+  "cto": [
+    "chief technology officer",
+    "cto",
+    "vp engineering",
+    "head of engineering"
+  ]
+}

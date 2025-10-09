@@ -1,0 +1,12 @@
+{
+  "name": "smarthire",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run dev --prefix frontend/smart-hire-frontend\" \"uvicorn app.main:app --reload\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
+
