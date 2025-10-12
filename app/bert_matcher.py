@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer, util
 from app.bert_preprocess import BertPreprocessor
 
 class BertRanker:
-    def __init__(self, preprocessor: BertPreprocessor, model_name="all-MiniLM-L6-v2"):
+    def __init__(self, preprocessor: BertPreprocessor, model_name="multi-qa-mpnet-base-dot-v1"):
         self.preprocessor = preprocessor
         self.model = SentenceTransformer(model_name)
 
@@ -27,33 +27,33 @@ class BertRanker:
         ranked = sorted(zip(resumes, cosine_scores), key=lambda x: x[1], reverse=True)
         return ranked   
 
-# if __name__ == "__main__":
-#     # Initialize preprocessor and BertRanker
-#     preprocessor = BertPreprocessor()
-#     bert_ranker = BertRanker(preprocessor)
+if __name__ == "__main__":
+    # Initialize preprocessor and BertRanker
+    preprocessor = BertPreprocessor()
+    bert_ranker = BertRanker(preprocessor)
 
-#     # Sample job description
-#     job_desc = """
-#     Looking for a Machine Learning Engineer with strong Python skills,
-#     experience in NLP, and familiarity with Flask for deploying models.
-#     """
+    # Sample job description
+    job_desc = """
+    Looking for a Machine Learning Engineer with strong Python skills,
+    experience in NLP, and familiarity with Flask for deploying models.
+    """
 
-#     # Sample resumes (replace with real text or extracted text from files)
-#     resumes = [
-#         """Experienced Java developer with 3 years in Spring Boot and Hibernate.
-#            Worked on microservices and cloud deployment.""",
+    # Sample resumes (replace with real text or extracted text from files)
+    resumes = [
+        """Experienced Java developer with 3 years in Spring Boot and Hibernate.
+           Worked on microservices and cloud deployment.""",
 
-#         """Python developer skilled in Flask, Pandas, Scikit-learn, and TensorFlow.
-#            2 years experience building ML pipelines and deploying APIs.""",
+        """Python developer skilled in Flask, Pandas, Scikit-learn, and TensorFlow.
+           2 years experience building ML pipelines and deploying APIs.""",
 
-#         """Data scientist with expertise in NLP, BERT, HuggingFace Transformers,
-#            and model deployment. Strong experience in Python and Flask."""
-#     ]
+        """Data scientist with expertise in NLP, BERT, HuggingFace Transformers,
+           and model deployment. Strong experience in Python and Flask."""
+    ]
 
-#     # Rank resumes
-#     ranked_resumes = bert_ranker.rank_resumes(job_desc, resumes)
+    # Rank resumes
+    ranked_resumes = bert_ranker.rank_resumes(job_desc, resumes)
 
-#     # Print results
-#     print("=== BERT Ranking ===")
-#     for i, (resume_text, score) in enumerate(ranked_resumes, start=1):
-#         print(f"Rank {i}: Score = {score:.4f}\nResume: {resume_text}\n")
+    # Print results
+    print("=== BERT Ranking ===")
+    for i, (resume_text, score) in enumerate(ranked_resumes, start=1):
+        print(f"Rank {i}: Score = {score:.4f}\nResume: {resume_text}\n")

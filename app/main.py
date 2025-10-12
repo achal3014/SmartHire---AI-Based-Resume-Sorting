@@ -34,7 +34,9 @@ async def rank_resumes(
         saved_files.append(path)
 
     jd_skills_list = [s.strip() for s in jd_skills.split(",")]
-    ranked_results = pipeline.rank_resumes_hybrid(saved_files, job_description, jd_skills_list)
+    pipeline.load_resumes(saved_files)
+    ranked_results = pipeline.rank_resumes_hybrid(job_description, jd_skills_list)
+
     
     # Format for frontend
     response = [

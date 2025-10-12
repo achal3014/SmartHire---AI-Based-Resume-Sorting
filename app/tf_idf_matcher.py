@@ -6,7 +6,7 @@ from app.tf_idf_preprocess import SimpleResumePreprocessor as TFIDFPreprocessor
 class TFIDFMatcher:
     def __init__(self):
         # TF-IDF vectorizer
-        self.vectorizer = TfidfVectorizer(stop_words='english', lowercase=True)
+        self.vectorizer = TfidfVectorizer(stop_words='english', lowercase=True, ngram_range=(1,3))
         self.tfidf_matrix = None
         self.resume_texts = []
         self.resume_names = []

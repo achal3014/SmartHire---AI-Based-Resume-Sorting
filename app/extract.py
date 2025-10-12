@@ -43,9 +43,10 @@ class Extractor:
 
 if __name__ == "__main__":
     pdf_text = Extractor.extract_text_from_file("data/resumes/Achal_resume_college.pdf")
+    # print(pdf_text)
     # docx_text = extract_text_from_file("data/resumes/sample_resume.docx")
     # txt_text = extract_text_from_file("data/resumes/sample_resume.txt")
 
-    print("PDF:", pdf_text[:1600])
+    # print("PDF:", pdf_text[:1600])
     # print("DOCX:", docx_text[:200])
     # print("TXT:", txt_text[:200])
